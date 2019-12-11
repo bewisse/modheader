@@ -451,8 +451,8 @@ browser.contextMenus.create({
 initializeStorage();
 resetBadgeAndContextMenu();
 
-chrome.runtime.onInstalled.addListener(details => {
-  if (details.reason === 'install') {
-    chrome.tabs.create({ url: 'https://r.bewisse.com/modheader/postinstall' });
-  }
-});
+//chrome.runtime.onInstalled.addListener(details => {
+//  if (details.reason === 'install') {
+//    chrome.tabs.create({ url: 'https://r.bewisse.com/modheader/postinstall' });
+//  }
+//});
