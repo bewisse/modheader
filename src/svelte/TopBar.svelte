@@ -225,11 +225,11 @@
       </IconButton>
       {#if $isLocked}
         <IconButton dense on:click={() => unlockAllTab()} title="Unlock tab">
-          <MdiIcon size="24" icon={mdiLockOpenOutline} {color} />
+          <MdiIcon size="24" icon={mdiLockOutline} {color} />
         </IconButton>
       {:else}
         <IconButton dense on:click={() => lockToTab()} title="Lock to tab">
-          <MdiIcon size="24" icon={mdiLockOutline} {color} />
+          <MdiIcon size="24" icon={mdiLockOpenOutline} {color} />
         </IconButton>
       {/if}
       <IconButton
