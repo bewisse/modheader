@@ -103,7 +103,7 @@ export async function addFilter() {
   if (tab && !lodashIsEmpty(tab.url)) {
     const origin = new URL(tab.url).origin;
     if (!lodashIsEmpty(origin) && origin !== 'null') {
-      urlRegex = `${origin}/.*`;
+      urlRegex = origin.replace(/\//g,'\\/');
     }
   }
   const filters = latestProfiles[latestSelectedProfileIndex].filters;

@@ -32,7 +32,7 @@ function passFilters_(url, type, filters) {
           if (allowUrls === undefined) {
             allowUrls = false;
           }
-          if (url.search(filter.urlRegex) === 0) {
+          if (new RegExp(filter.urlRegex).test(url)) {
             allowUrls = true;
           }
           break;
@@ -41,7 +41,7 @@ function passFilters_(url, type, filters) {
           if (allowUrls === undefined) {
             allowUrls = true;
           }
-          if (url.search(filter.urlRegex) === 0) {
+          if (new RegExp(filter.urlRegex).test(url)) {
             allowUrls = false;
           }
           break;
