@@ -32,8 +32,12 @@ function passFilters_(url, type, filters) {
           if (allowUrls === undefined) {
             allowUrls = false;
           }
-          if (new RegExp(filter.urlRegex).test(url)) {
-            allowUrls = true;
+          try{
+            if (new RegExp(filter.urlRegex).test(url)) {
+              allowUrls = true;
+            }
+          }catch{
+            allowUrls = false;
           }
           break;
         case 'excludeUrls':
@@ -41,8 +45,12 @@ function passFilters_(url, type, filters) {
           if (allowUrls === undefined) {
             allowUrls = true;
           }
-          if (new RegExp(filter.urlRegex).test(url)) {
-            allowUrls = false;
+          try{
+            if (new RegExp(filter.urlRegex).test(url)) {
+              allowUrls = false;
+            }
+          }catch{
+            allowUrls = true;
           }
           break;
         case 'types':
