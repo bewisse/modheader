@@ -81,7 +81,7 @@
   }
 
   :global(.main-drawer-collapsed) {
-    width: 36px;
+    width: 50px;
   }
 
   :global(.main-drawer-item) {

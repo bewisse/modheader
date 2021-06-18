@@ -55,7 +55,7 @@
     font-family: Roboto, Helvetica Neue, sans-serif;
     height: 460px;
     /** Fix FF popup disappearance on long window. */
-    width: 620px !important;
+    width: 630px !important;
     position: relative !important;
     overflow-x: hidden;
     margin: 0;
@@ -100,7 +100,7 @@
     margin-left: 0 !important;
     width: 580px;
     position: absolute;
-    left: 36px;
+    left: 50px;
   }
 
   :global(.disabled) {
